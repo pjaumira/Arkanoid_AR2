@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Game>
+	<InvaderInfo>
+		<Normal min="5" max="10"/>
+		<Heavy min="25" max="35"/>
+	</InvaderInfo>
+	<Level PlatformSpeed="4">
+		<InvaderInfo i="0" j="0" type="N"/>
+		<Invader i="0" j="1" type="H"/>
+		<Invader i="0" j="2" type="N"/>
+		<Invader i="0" j="10" type="N"/>
+		<Invader i="0" j="11" type="H"/>
+		<Invader i="0" j="12" type="N"/>
+		<Invader i="1" j="2" type="H"/>
+		<Invader i="1" j="5" type="N"/>
+		<Invader i="1" j="10" type="H"/>
+		<Invader i="1" j="7" type="H"/>
+		<Invader i="2" j="6" type="N"/>
+		<Invader i="2" j="9" type="H"/>
+		<Invader i="3" j="7" type="H"/>
+		<Invader i="3" j="2" type="H"/>
+		<Invader i="3" j="5" type="N"/>
+		<Invader i="3" j="10" type="N"/>
+		<Invader i="4" j="1" type="F"/>
+		<Invader i="4" j="6" type="N"/>
+		<Invader i="4" j="7" type="N"/>
+		<Invader i="4" j="11" type="N"/>
+	</Level>
+</Game>

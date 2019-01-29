@@ -1,0 +1,15 @@
+﻿  Bullet.cpp
+  Enemy.cpp
+  Level.cpp
+  Main.cpp
+  Game.cpp
+  Menu.cpp
+  Player.cpp
+  Powerup.cpp
+  Ranking.cpp
+d:\visual projects\ar2\src\space_invaders\ranking.cpp(193): warning C4018: '>': signed/unsigned mismatch
+d:\visual projects\ar2\src\space_invaders\ranking.cpp(202): warning C4018: '<': signed/unsigned mismatch
+  Renderer.cpp
+  Scene.cpp
+  Splashscreen.cpp
+LINK : fatal error LNK1561: entry point must be defined
