@@ -36,8 +36,7 @@ public:
 	void Render();
 	void LoadFont(Font font);
 	void LoadTexture(const std::string &id, const std::string &path);
-	//void LoadTextureText(const std::string &fontId, Text text);
-	Vector2 LoadTextureText(const std::string &fontId, Text text);
+	void LoadTextureText(const std::string &fontId, Text text);
 	Vector2 GetTextureSize(const std::string &id);
 	void PushImage(const std::string &id, const SDL_Rect &rect);
 	void PushSprite(const std::string &id, const SDL_Rect &rectSprite, const SDL_Rect &rectPos);

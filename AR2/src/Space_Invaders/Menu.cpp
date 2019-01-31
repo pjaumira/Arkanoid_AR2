@@ -3,13 +3,16 @@
 
 Menu::Menu() {
 
-	//us de les fonts de text
+	//estat de la escena, activa els botons
 	sceneState = SceneState::RUNNING;
+
+	//carga dels textos
 	Renderer::Instance()->LoadTexture("menu", PATH_IMG + BG_MENU);
 	Renderer::Instance()->LoadTextureText("sunspire", buttonTextLevel);
 	Renderer::Instance()->LoadTextureText("sunspire", buttonTextSoundOptions);
 	Renderer::Instance()->LoadTextureText("sunspire", buttonTextRanking);
 	Renderer::Instance()->LoadTextureText("sunspire", buttonTextExit);
+
 
 	Vector2 v;
 
@@ -34,9 +37,11 @@ void Menu::EventHandle() {
 	SDL_Event event;
 	while (SDL_PollEvent(&event)) {
 		switch (event.type) {
+			//sortir del joc mitjançant input
 		case SDL_QUIT:
 			sceneState = SceneState::EXIT;
 			break;
+			//clicks en els botons de transicio
 		case SDL_MOUSEBUTTONDOWN:
 
 			mousePoint = { event.motion.x, event.motion.y };
@@ -55,13 +60,13 @@ void Menu::EventHandle() {
 			else if (collision(mousePoint, rectExitButton)) {
 				sceneState = SceneState::EXIT;
 			}
-
 			break;
 		default:break;
 		}
 	}
 }
 
+//useless right now
 void Menu::Update() {}
 
 void Menu::Draw()
@@ -83,12 +88,14 @@ bool Menu::collision(SDL_Point origin, SDL_Rect target) {
 	return (origin.x > target.x && origin.x < target.x + target.w && origin.y > target.y && origin.y < target.y + target.h);
 }
 
+//silenciar la musica
 void Menu::updateSoundOptions() {
 	Renderer::Instance()->toggleMusic();
 }
 
 void Menu::exit() {}
 
+//retorna el boto perque Game canvi escena
 string Menu::getButton() {
 	return selectedButton;
 }

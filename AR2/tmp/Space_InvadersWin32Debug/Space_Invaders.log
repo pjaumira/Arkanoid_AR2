@@ -1,7 +1,18 @@
-﻿  Game.cpp
-  Main.cpp
+﻿  Enemy.cpp
+  Level.cpp
+  Game.cpp
+  Menu.cpp
+  Player.cpp
+  Ranking.cpp
+d:\github\arkanoid_ar2\ar2\src\space_invaders\ranking.cpp(190): warning C4018: '>': signed/unsigned mismatch
+d:\github\arkanoid_ar2\ar2\src\space_invaders\ranking.cpp(200): warning C4018: '<': signed/unsigned mismatch
+  Renderer.cpp
+  Scene.cpp
+  Source.cpp
   Splashscreen.cpp
-d:\visual projects\ar2\src\space_invaders\splashscreen.cpp(16): warning C4101: 'event': unreferenced local variable
+d:\github\arkanoid_ar2\ar2\src\space_invaders\splashscreen.cpp(16): warning C4101: 'event': unreferenced local variable
   Generating Code...
-  Space_Invaders.vcxproj -> D:\Visual Projects\AR2\\bin\Win32Debug\Space_Invaders.exe
+d:\github\arkanoid_ar2\ar2\src\space_invaders\ranking.cpp(133): warning C4715: 'Ranking::getRect': not all control paths return a value
+d:\github\arkanoid_ar2\ar2\src\space_invaders\ranking.cpp(171): warning C4715: 'Ranking::getRectID': not all control paths return a value
+  Space_Invaders.vcxproj -> D:\GitHub\Arkanoid_AR2\AR2\\bin\Win32Debug\Space_Invaders.exe
   0 archivo(s) copiado(s)

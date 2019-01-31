@@ -1,0 +1,36 @@
+﻿  Bullet.cpp
+  Enemy.cpp
+  Level.cpp
+  Main.cpp
+  Game.cpp
+  Menu.cpp
+  Player.cpp
+  Powerup.cpp
+  Ranking.cpp
+  Renderer.cpp
+  Scene.cpp
+  Splashscreen.cpp
+d:\github\arkanoid_ar2\ar2\src\space_invaders\splashscreen.cpp(16): warning C4101: 'event': unreferenced local variable
+  Generating Code...
+d:\github\arkanoid_ar2\ar2\src\space_invaders\ranking.cpp(136): warning C4715: 'Ranking::getRect': not all control paths return a value
+d:\github\arkanoid_ar2\ar2\src\space_invaders\ranking.cpp(174): warning C4715: 'Ranking::getRectID': not all control paths return a value
+  Space_Invaders.vcxproj -> D:\GitHub\Arkanoid_AR2\AR2\\bin\x64Debug\Space_Invaders.exe
+  D:\GitHub\Arkanoid_AR2\AR2\\dep\dll\x64\libFLAC-8.dll
+  D:\GitHub\Arkanoid_AR2\AR2\\dep\dll\x64\libfreetype-6.dll
+  D:\GitHub\Arkanoid_AR2\AR2\\dep\dll\x64\libjpeg-9.dll
+  D:\GitHub\Arkanoid_AR2\AR2\\dep\dll\x64\libmikmod-2.dll
+  D:\GitHub\Arkanoid_AR2\AR2\\dep\dll\x64\libmodplug-1.dll
+  D:\GitHub\Arkanoid_AR2\AR2\\dep\dll\x64\libogg-0.dll
+  D:\GitHub\Arkanoid_AR2\AR2\\dep\dll\x64\libpng16-16.dll
+  D:\GitHub\Arkanoid_AR2\AR2\\dep\dll\x64\libtiff-5.dll
+  D:\GitHub\Arkanoid_AR2\AR2\\dep\dll\x64\libvorbis-0.dll
+  D:\GitHub\Arkanoid_AR2\AR2\\dep\dll\x64\libvorbisfile-3.dll
+  D:\GitHub\Arkanoid_AR2\AR2\\dep\dll\x64\libwebp-4.dll
+  D:\GitHub\Arkanoid_AR2\AR2\\dep\dll\x64\SDL2.dll
+  D:\GitHub\Arkanoid_AR2\AR2\\dep\dll\x64\SDL2_image.dll
+  D:\GitHub\Arkanoid_AR2\AR2\\dep\dll\x64\SDL2_mixer.dll
+  D:\GitHub\Arkanoid_AR2\AR2\\dep\dll\x64\SDL2_net.dll
+  D:\GitHub\Arkanoid_AR2\AR2\\dep\dll\x64\SDL2_ttf.dll
+  D:\GitHub\Arkanoid_AR2\AR2\\dep\dll\x64\smpeg2.dll
+  D:\GitHub\Arkanoid_AR2\AR2\\dep\dll\x64\zlib1.dll
+  18 archivo(s) copiado(s)

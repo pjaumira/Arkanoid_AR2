@@ -5,20 +5,24 @@ Game::Game() {
 
 	map<int, string> score;
 	string button;
+
+	//estat inicial
 	GameState gameState = GameState::SPLASH;
 	Scene *m_currentScene;
-
-	//cambiar a Splashscreen
 	m_currentScene = new Splashscreen();
+
+	//events en cas de game estates diferents (mentre el joc no es tenqui)
 	while (gameState != GameState::EXIT) {
 		switch (m_currentScene->GetState())
 		{
+			//fer funcionar la escena de forma normal
 		case Scene::SceneState::RUNNING:
 			m_currentScene->EventHandle();
 			m_currentScene->Update();
 			m_currentScene->Draw();
 			break;
 
+			//tancar el funcionament de les escenes
 		case Scene::SceneState::EXIT:
 			switch (gameState)
 			{
@@ -36,6 +40,7 @@ Game::Game() {
 			}
 			break;
 
+			//transicio entre escenes
 		case Scene::SceneState::GOTO:
 			switch (gameState)
 			{
@@ -44,6 +49,7 @@ Game::Game() {
 				gameState = GameState::MENU;
 				m_currentScene = new Menu();
 				break;
+				//transicions menu (!)
 			case GameState::MENU:
 				button = m_currentScene->getButton();
 
@@ -55,8 +61,8 @@ Game::Game() {
 				}
 				else {
 					gameState = GameState::PLAY;
-					//if (button == "Play")
-						//m_currentScene = new Level;
+					if (button == "Play")
+						m_currentScene = new Level;
 				}
 				break;
 			case GameState::PLAY:

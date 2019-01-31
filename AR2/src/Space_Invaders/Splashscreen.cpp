@@ -14,7 +14,6 @@ Splashscreen::Splashscreen() {
 
 void Splashscreen::EventHandle() {
 	SDL_Event event;
-	sleep_for(3s);
 	sceneState = SceneState::GOTO;
 }
 
@@ -24,5 +23,7 @@ void Splashscreen::Draw() {
 	Renderer::Instance()->Clear();
 	//Draw del fons i els buttons sobre la escena
 	Renderer::Instance()->PushImage("splash", rectBackground);
+	Renderer::Instance()->Render();
+	sleep_for(3s);
 }
 

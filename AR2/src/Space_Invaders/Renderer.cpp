@@ -63,21 +63,11 @@ void Renderer::LoadTexture(const std::string &id, const std::string &path) {
 	m_textureData[id] = texture;
 };
 
-/*void Renderer::LoadTextureText(const std::string &fontId, Text text) {
+void Renderer::LoadTextureText(const std::string &fontId, Text text) {
 	SDL_Surface	*tmpSurf = TTF_RenderText_Blended(m_fontData[fontId], text.text.c_str(), SDL_Color{ text.color.r, text.color.g, text.color.b,text.color.a });
 	if (tmpSurf == nullptr) throw "Unable to create the SDL text surface";
 	SDL_Texture *texture{ SDL_CreateTextureFromSurface(m_renderer, tmpSurf) };
 	m_textureData[text.id] = texture;
-};*/
-
-Vector2 Renderer::LoadTextureText(const std::string &fontId, Text text) {
-	SDL_Surface	*tmpSurf = TTF_RenderText_Blended(m_fontData[fontId], text.text.c_str(), SDL_Color{ text.color.r, text.color.g, text.color.b,text.color.a });
-	if (tmpSurf == nullptr) throw "Unable to create the SDL text surface";
-	SDL_Texture *texture{ SDL_CreateTextureFromSurface(m_renderer, tmpSurf) };
-	m_textureData[text.id] = texture;
-	int w; int h;
-	TTF_SizeText(m_fontData[fontId], text.text.c_str(), &w, &h);
-	return { w, h };
 };
 
 Vector2 Renderer::GetTextureSize(const std::string &id) {

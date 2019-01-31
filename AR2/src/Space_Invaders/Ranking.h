@@ -32,8 +32,10 @@ private:
 
 	int maxNum = 10;
 	void checkMaxNumScore();
+
 	map<int, string> ranking;
 	SDL_Rect inputText{ SPRITE_WIDTH,SPRITE_HEIGHT,SPRITE_WIDTH * 3,SPRITE_HEIGHT };
+
 	SDL_Point mousePoint;
 	bool collision(SDL_Point, SDL_Rect);
 

@@ -31,6 +31,7 @@ private:
 	void exit();
 
 public:
+
 	Menu();
 	void EventHandle();
 	void Update();

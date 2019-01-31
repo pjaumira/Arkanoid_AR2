@@ -1,6 +1,6 @@
 #include "Ranking.h"
 
-//inicialitzacio
+//constructor base
 Ranking::Ranking() {
 	sceneState = SceneState::RUNNING;
 	init();
@@ -10,6 +10,7 @@ Ranking::Ranking() {
 	}
 }
 
+//constructor amb puntuacio
 Ranking::Ranking(map<int, string> newScores) {
 	sceneState = SceneState::RUNNING;
 	init();
@@ -17,7 +18,6 @@ Ranking::Ranking(map<int, string> newScores) {
 	if (fileExists()) {
 		readFile();
 		insertNewScore(newScores);
-
 		if (checkIfHighScore(newScores)) {
 			checkMaxNumScore();
 		}
@@ -28,13 +28,11 @@ Ranking::Ranking(map<int, string> newScores) {
 		insertNewScore(newScores);
 		writeFile();
 	}
-
 	checkMaxNumScore();
-
 }
 
+//inicialitzacio
 void Ranking::init() {
-	//carrega de textures dels rankings
 
 	//fons
 	Renderer::Instance()->LoadTexture("ranking", PATH_IMG + BG_RANKING);
@@ -51,7 +49,6 @@ void Ranking::init() {
 	Renderer::Instance()->LoadTextureText("sunspire", m_TextRanking10);
 	// text boto retorn menu
 	Renderer::Instance()->LoadTextureText("sunspire", m_TextExit);
-
 
 	Vector2 v;
 	//textos top 10
@@ -91,7 +88,7 @@ void Ranking::init() {
 	m_rectReturnButton.h = v.y;
 }
 
-
+//insertar nova puntuacio al map
 void  Ranking::insertNewScore(map<int, string> newScores) {
 	for (map<int, string>::iterator it = newScores.begin(); it != newScores.end(); ++it){
 		ranking.insert(make_pair(it->first, it->second));
@@ -195,6 +192,7 @@ void  Ranking::checkMaxNumScore() {
 	}
 }
 
+//comprova si es coloca a la llista
 bool Ranking::checkIfHighScore(map<int, string> newScores) {
 	bool res = false;
 	for (map<int, string>::iterator it = newScores.begin(); it != newScores.end(); ++it){
@@ -208,7 +206,7 @@ bool Ranking::checkIfHighScore(map<int, string> newScores) {
 	return res;
 }
 
-//comprovacio de si existeix el ocument
+//comprovacio de si existeix el document
 bool Ranking::fileExists() {
 	ifstream file(PATH_FILES + RANKING);
 	return file.good();
